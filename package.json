@@ -1,0 +1,11 @@
+{
+    "name": "js-tools",
+    "version": "1.0.0",
+    "description": "一款封装js工具库的library",
+    "main": "index.js",
+    "scripts": {
+        "dev": "nodemon ./src/tools.js"
+    },
+    "author": "",
+    "license": "ISC"
+}

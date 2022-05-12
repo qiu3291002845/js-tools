@@ -1,0 +1,25 @@
+"use strict";
+// 生成随机十六进制 -- 生成随机十六进制颜色。
+const randomHexColor = () => `#${Math.floor(Math.random() * 0xffffff)
+    .toString(16)
+    .padEnd(6, '0')}`;
+// 数字转千分位
+const numberToThousandths = (number) => {
+    // 转换为字符串数组
+    const str = (number + '').split('.');
+    const intList = str[0].split('');
+    const floatStr = str[1] || '';
+    let res = '';
+    intList.reverse().map((item, index) => {
+        if (index !== 0 && index % 3 === 0) {
+            res = item + ',' + res;
+        }
+        else {
+            res = item + res;
+        }
+    });
+    const float = floatStr ? '.' + floatStr : '';
+    return res + float;
+};
+// 检查一个数字是偶数还是奇数
+const isEven = (num) => num % 2 === 0;
