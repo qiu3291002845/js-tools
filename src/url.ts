@@ -1,5 +1,5 @@
 // 地址栏参数格式化
-const queryString = (str: string) => {
+export const queryString = (str: string) => {
   if (str) {
     const query: any = {}
     str.split('&').forEach(item => {
@@ -14,7 +14,7 @@ const queryString = (str: string) => {
 }
 
 // 从 URL 获取查询参数 -- 从 URL 轻松检索查询参数
-const getParameters = (URL: string): string => {
+export const getParameters = (URL: string): string => {
   URL = JSON.parse(
     '{"' +
       decodeURI(URL.split('?')[1])

@@ -1,4 +1,6 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.clearCookies = void 0;
 // 清除所有 Cookie -- 您可以通过使用 document.cookie 访问 cookie 并清除它来轻松清除存储在网页上的所有 cookie。
 const clearCookies = () => {
     document.cookie
@@ -7,3 +9,4 @@ const clearCookies = () => {
         .replace(/^ +/, '')
         .replace(/=.*/, `=;expires=${new Date(0).toUTCString()};path=/`)));
 };
+exports.clearCookies = clearCookies;

@@ -1,4 +1,6 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getParameters = exports.queryString = void 0;
 // 地址栏参数格式化
 const queryString = (str) => {
     if (str) {
@@ -14,6 +16,7 @@ const queryString = (str) => {
         return Error('The parameter of querystring is undefined');
     }
 };
+exports.queryString = queryString;
 // 从 URL 获取查询参数 -- 从 URL 轻松检索查询参数
 const getParameters = (URL) => {
     URL = JSON.parse('{"' +
@@ -24,3 +27,4 @@ const getParameters = (URL) => {
         '"}');
     return JSON.stringify(URL);
 };
+exports.getParameters = getParameters;
