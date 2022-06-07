@@ -23,3 +23,7 @@ const numberToThousandths = (number) => {
 };
 // 检查一个数字是偶数还是奇数
 const isEven = (num) => num % 2 === 0;
+// 求数字的平均值 -- 使用 reduce 方法找到多个数字之间的平均值。
+const average = (...args) => {
+    return args.reduce((a, b) => a + b) / args.length;
+};

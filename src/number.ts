@@ -29,3 +29,7 @@ const isEven = (num: number): boolean => num % 2 === 0
 const average = (...args: number[]): number => {
   return args.reduce((a: number, b: number) => a + b) / args.length
 }
+// 去除数字之外的所有字符
+const removeStr = (str: string): number => {
+  return Number(str.replace(/\D/g, ''))
+}

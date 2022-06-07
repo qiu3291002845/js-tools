@@ -9,3 +9,10 @@ getSelectedText()
 // 检测暗模式 -- 使用以下代码检查用户的设备是否处于暗模式。
 const isDarkMode = (): boolean =>
   window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+
+// 生成uuid -- 通过 blob 地址生成
+const uuid = (): string => {
+  return URL.createObjectURL(new Blob(['']))
+    .split('/')
+    .pop() as string
+}
